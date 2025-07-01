@@ -34,7 +34,7 @@ jobs:
           -t ${{ secrets.DOCKER_USERNAME }}/node-scout:latest
           .
 
-      - name: Push a Docker Hub
+      - name: Push a Docker Hub 
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/node-scout:${{ steps.version.outputs.VERSION }}
           docker push ${{ secrets.DOCKER_USERNAME }}/node-scout:latest
