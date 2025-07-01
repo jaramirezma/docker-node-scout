@@ -33,7 +33,7 @@ jobs:
           docker build \
             -t ${{ secrets.DOCKER_USERNAME }}/node-scout:${{ steps.version.outputs.VERSION }} \
             -t ${{ secrets.DOCKER_USERNAME }}/node-scout:latest \
-            .
+            ./docker-node-scout
 
       - name: Push a Docker Hub
         run: |
